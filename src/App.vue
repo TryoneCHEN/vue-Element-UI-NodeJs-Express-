@@ -8,8 +8,8 @@
               <i class="el-icon-message"></i>内容管理
             </template>
             <el-menu-item-group>
-              <el-menu-item index="/posts/create">新建文章</el-menu-item>
-              <el-menu-item index="/posts/index">文章列表</el-menu-item>
+              <el-menu-item index="/posts/create">文章列表</el-menu-item>
+              <el-menu-item index="/posts/index">新建文章</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -29,11 +29,7 @@
         </el-header>
 
         <el-main>
-          <el-table :data="tableData">
-            <el-table-column prop="date" label="日期" width="140"></el-table-column>
-            <el-table-column prop="name" label="姓名" width="120"></el-table-column>
-            <el-table-column prop="address" label="地址"></el-table-column>
-          </el-table>
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -42,18 +38,7 @@
 
 <script>
 export default {
-  name: "app",
-  data() {
-    const item = {
-      date: "2016-05-02",
-      name: "王小虎",
-      address: "上海市普陀区金沙江路 1518 弄"
-    };
-    return {
-      tableData: Array(20).fill(item)
-    };
-  },
-  components: {}
+  
 };
 </script>
 
@@ -66,8 +51,8 @@ html ,body{
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  /* text-align: center; */
+  /* color: #2c3e50; */
   /* margin-top: 60px; */
 }
 .el-header {
