@@ -19,14 +19,19 @@
 export default {
   data() {
     return {
-      artice: {
-        
-      }
+      artice: {}
     };
   },
   methods: {
     saveArticle() {
-      console.log(this.artice);
+      this.$http.post("articles", this.artice).then(res => {
+        console.log(res)
+        this.$message({
+          message: "文章创建成功",
+          type: "success"
+        });
+        this.$router.push("/articles/index");
+      });
     }
   }
 };

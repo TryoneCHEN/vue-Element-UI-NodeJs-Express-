@@ -8,15 +8,15 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      redirect:'/posts/index'
+      redirect:'/articles/index'
     },
     {
-      path: '/posts/index',
+      path: '/articles/index',
       name: 'create-index',
       component: () => import(/* webpackChunkName: "about" */ './views/ListArtice.vue')
     },
     {
-      path: '/posts/create',
+      path: '/articles/create',
       name: 'create-artice',
       component: () => import(/* webpackChunkName: "about" */ './views/CreateArtice.vue')
     }
