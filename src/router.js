@@ -19,6 +19,11 @@ export default new Router({
       path: '/articles/create',
       name: 'create-artice',
       component: () => import(/* webpackChunkName: "about" */ './views/CreateArtice.vue')
+    },
+    {
+      path: '/articles/:id/edit',
+      name: 'edit-artice',
+      component: () => import(/* webpackChunkName: "about" */ './views/EditArtice.vue')
     }
     
   ]

@@ -56,6 +56,24 @@ app.delete('/api/articles/:id', async (req,res) => {
     })
 })
 
+// 10.文章详情
+// 一个get方法
+app.get('/api/articles/:id', async (req,res) => {
+    // 在模型上create一个数据
+    const article =  await Article.findById(req.params.id)
+    // 发送
+    res.send(article)
+})
+
+// 11.文章详情
+// 一个put方法
+app.put('/api/articles/:id', async (req,res) => {
+    // 在模型上create一个数据
+    const article =  await Article.findByIdAndUpdate(req.params.id,req.body)
+    // 发送
+    res.send(article)
+})
+
 // 4.默认首页
 app.get('/', async(req,res)=>{
     res.send('index')

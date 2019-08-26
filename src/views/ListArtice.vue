@@ -30,8 +30,8 @@ export default {
         this.articles = res.data;
       });
     },
-    edit(row) {
-      console.log(row);
+    edit(id) {
+      this.$router.push(`/articles/${id}/edit`)
     },
     remove(id) {
       this.$http.delete(`articles/${id}`).then(res => {
