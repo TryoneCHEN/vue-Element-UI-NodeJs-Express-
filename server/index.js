@@ -44,6 +44,18 @@ app.get('/api/articles', async (req,res) => {
     // 发送
     res.send(articles)
 })
+
+// 9.删除文章
+// 一个delete方法
+app.delete('/api/articles/:id', async (req,res) => {
+    // 在模型上create一个数据
+    await Article.findByIdAndDelete(req.params.id)
+    // 发送
+    res.send({
+        status:true
+    })
+})
+
 // 4.默认首页
 app.get('/', async(req,res)=>{
     res.send('index')
