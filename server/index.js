@@ -22,6 +22,7 @@ mongoose.connect("mongodb://localhost:27017/element-admin", {
 const Article = mongoose.model('Article',new mongoose.Schema({
     title:{type:String},
     body:{type:String},
+    type: {type: String}
 }))
 
 app.get('/', async(req,res)=>{

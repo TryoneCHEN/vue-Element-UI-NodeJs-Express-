@@ -3,6 +3,7 @@
     <el-table border :data="articles">
       <el-table-column prop="title" label="日期" width="140"></el-table-column>
       <el-table-column prop="body" label="姓名" width="120"></el-table-column>
+      <el-table-column prop="type" label="类别" width="80"></el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button size="mini" @click="edit(scope.row._id)">编辑</el-button>
@@ -22,7 +23,7 @@ export default {
     };
   },
   created() {
-    this.ListArticles()
+    this.ListArticles();
   },
   methods: {
     ListArticles() {
@@ -31,7 +32,7 @@ export default {
       });
     },
     edit(id) {
-      this.$router.push(`/articles/${id}/edit`)
+      this.$router.push(`/articles/${id}/edit`);
     },
     remove(id) {
       this.$http.delete(`articles/${id}`).then(res => {
@@ -39,7 +40,7 @@ export default {
           message: "文章删除成功",
           type: "success"
         });
-        this.ListArticles()
+        this.ListArticles();
       });
     }
   }
