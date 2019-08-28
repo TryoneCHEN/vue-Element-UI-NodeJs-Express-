@@ -46,7 +46,7 @@ app.get('/api/articles', async (req,res) => {
     res.send(articles)
 })
 
-// 9.删除文章
+// 10.删除文章
 // 一个delete方法
 app.delete('/api/articles/:id', async (req,res) => {
     // 在模型上create一个数据
@@ -57,7 +57,7 @@ app.delete('/api/articles/:id', async (req,res) => {
     })
 })
 
-// 10.文章详情
+// 11.文章详情
 // 一个get方法
 app.get('/api/articles/:id', async (req,res) => {
     // 在模型上create一个数据
@@ -66,7 +66,7 @@ app.get('/api/articles/:id', async (req,res) => {
     res.send(article)
 })
 
-// 11.文章详情
+// 12.文章修改
 // 一个put方法
 app.put('/api/articles/:id', async (req,res) => {
     // 在模型上create一个数据

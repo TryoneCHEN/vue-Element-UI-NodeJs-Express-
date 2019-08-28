@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      redirect:'/articles/index'
+      redirect:'/articles/user'
     },
     {
       path: '/articles/index',
@@ -19,6 +19,11 @@ export default new Router({
       path: '/articles/create',
       name: 'create-artice',
       component: () => import(/* webpackChunkName: "about" */ './views/CreateArtice.vue')
+    },
+    {
+      path: '/articles/user',
+      name: 'user',
+      component: () => import(/* webpackChunkName: "about" */ './views/user.vue')
     },
     {
       path: '/articles/:id/edit',

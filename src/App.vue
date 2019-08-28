@@ -17,11 +17,11 @@
 
       <el-container>
         <el-header style="text-align: right; font-size: 12px">
-          <div style="text-align: left;" class="btn-fullscreen" @click="handleFullScreen">
+          <!-- <div style="text-align: left;" class="btn-fullscreen" @click="handleFullScreen">
           <el-tooltip effect="dark" :content="fullscreen?`取消全屏`:`全屏`" placement="bottom">
             <i class="el-icon-rank"></i>
           </el-tooltip>
-        </div>
+        </div> -->
           <el-dropdown>
             <i class="el-icon-setting" style="margin-right: 15px"></i>
             <el-dropdown-menu slot="dropdown">

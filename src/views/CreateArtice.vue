@@ -32,12 +32,14 @@ export default {
   },
   methods: {
     saveArticle() {
+      //调用增加文章接口
       this.$http.post("articles", this.artice).then(res => {
         console.log(res);
         this.$message({
           message: "文章创建成功",
           type: "success"
         });
+        // 创建成功后通过编程式导航跳转到/articles/index
         this.$router.push("/articles/index");
       });
     }
